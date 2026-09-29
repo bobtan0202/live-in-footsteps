@@ -11,17 +11,18 @@ h1,h2,h3,p{margin-top:0}
 h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.3rem,5vw,4.7rem);line-height:1.05;letter-spacing:-.035em;margin-bottom:22px}
 h3{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.05;margin-bottom:14px}
 
-.hero{position:relative;height:min(880px,92vh);min-height:650px;overflow:hidden;background:#0b1116;border-bottom:1px solid var(--line)}
-.hero__image{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero__shade{position:absolute;inset:0;background:
-  linear-gradient(90deg,rgba(3,8,12,.88) 0%,rgba(3,8,12,.64) 28%,rgba(3,8,12,.18) 58%,rgba(3,8,12,.02) 78%),
-  linear-gradient(180deg,rgba(3,8,12,.03) 52%,rgba(3,8,12,.58) 100%)}
-.hero__brand{position:absolute;left:max(7vw,28px);top:12%;z-index:2;width:min(700px,48vw);padding:28px 30px 30px;border-left:2px solid rgba(212,154,82,.85);background:linear-gradient(90deg,rgba(4,9,13,.62),rgba(4,9,13,.12));text-shadow:0 3px 18px rgba(0,0,0,.65)}
-.hero__eyebrow{letter-spacing:.22em;font-size:.78rem;color:#f5dfc1;margin:0 0 18px}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.7rem,8.8vw,8.5rem);line-height:.82;letter-spacing:-.045em;margin:0 0 26px}
-h1 span{display:block;font-size:.19em;letter-spacing:.3em;margin:0 0 18px 8px}
-.hero__hook{font-size:clamp(1.15rem,2.1vw,1.85rem);max-width:620px;margin:0 0 8px;color:#fff}
-.hero__sub{color:#f6d9ad;margin:0;font-weight:600}
+.hero{background:#081219;border-bottom:1px solid var(--line)}
+.hero__layout{display:grid;grid-template-columns:minmax(360px,42%) minmax(0,58%);min-height:min(820px,88vh);max-width:1600px;margin:0 auto}
+.hero__brand{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:76px clamp(36px,5vw,82px);background:radial-gradient(circle at 20% 30%,rgba(212,154,82,.08),transparent 38%),linear-gradient(180deg,#09151d 0%,#071118 100%);border-right:1px solid rgba(116,145,160,.16)}
+.hero__brand::after{content:"";position:absolute;right:-1px;top:14%;bottom:14%;width:1px;background:linear-gradient(180deg,transparent,rgba(212,154,82,.85),transparent)}
+.hero__visual{position:relative;min-width:0;overflow:hidden;background:#101820}
+.hero__visual::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(7,17,24,.28) 0%,transparent 18%),linear-gradient(180deg,transparent 70%,rgba(7,17,24,.18) 100%)}
+.hero__image{width:100%;height:100%;min-height:min(820px,88vh);object-fit:cover;object-position:center}
+.hero__eyebrow{letter-spacing:.22em;font-size:.76rem;color:#dcbf99;margin:0 0 24px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.2rem,7.2vw,7.6rem);line-height:.82;letter-spacing:-.045em;margin:0 0 32px}
+h1 span{display:block;font-size:.2em;letter-spacing:.3em;margin:0 0 18px 6px}
+.hero__hook{font-size:clamp(1.08rem,1.55vw,1.5rem);line-height:1.45;max-width:540px;margin:0 0 12px;color:#f5f1ea}
+.hero__sub{color:#d9b983;margin:0;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase}
 
 .section{padding:100px 0}
 .intro-section{padding-bottom:48px}
@@ -44,9 +45,7 @@ h1 span{display:block;font-size:.19em;letter-spacing:.3em;margin:0 0 18px 8px}
 
 .image-chapter,.finale{position:relative;min-height:72vh;overflow:hidden;border-block:1px solid var(--line);background:#0b1116}
 .image-chapter img,.finale img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.image-chapter__shade{position:absolute;inset:0;background:
-  linear-gradient(90deg,rgba(3,8,12,.90) 0%,rgba(3,8,12,.66) 33%,rgba(3,8,12,.22) 60%,rgba(3,8,12,.03) 82%),
-  linear-gradient(180deg,rgba(3,8,12,.03) 50%,rgba(3,8,12,.34) 100%)}
+.image-chapter__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,8,12,.90) 0%,rgba(3,8,12,.66) 33%,rgba(3,8,12,.22) 60%,rgba(3,8,12,.03) 82%),linear-gradient(180deg,rgba(3,8,12,.03) 50%,rgba(3,8,12,.34) 100%)}
 .image-chapter__copy{position:absolute;left:max(7vw,28px);top:50%;transform:translateY(-50%);width:min(610px,46vw);z-index:2;padding:28px 30px 30px;border-left:2px solid rgba(212,154,82,.82);background:linear-gradient(90deg,rgba(3,8,12,.66),rgba(3,8,12,.15));text-shadow:0 2px 14px rgba(0,0,0,.72)}
 .image-chapter__copy p:last-child{font-size:1.08rem;color:#e3e6e8}
 
@@ -61,34 +60,40 @@ h1 span{display:block;font-size:.19em;letter-spacing:.3em;margin:0 0 18px 8px}
 .feature-grid h3{font-size:1.3rem}
 
 .finale{min-height:80vh}
-.finale__shade{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(3,8,12,.03) 20%,rgba(3,8,12,.20) 48%,rgba(3,8,12,.90) 100%),
-  linear-gradient(90deg,rgba(3,8,12,.22),rgba(3,8,12,.03) 60%)}
+.finale__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,12,.03) 20%,rgba(3,8,12,.20) 48%,rgba(3,8,12,.90) 100%),linear-gradient(90deg,rgba(3,8,12,.22),rgba(3,8,12,.03) 60%)}
 .finale__copy{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);z-index:2;padding:28px 30px 30px;border-left:2px solid rgba(212,154,82,.82);background:linear-gradient(90deg,rgba(3,8,12,.72),rgba(3,8,12,.20));text-shadow:0 2px 14px rgba(0,0,0,.72)}
 .finale__copy h2{max-width:1000px}
 .finale__copy p{max-width:760px;font-size:1.12rem;color:#e3e6e8}
 
-.contact{padding:78px 0;background:#09141b;border-top:1px solid var(--line)}
-.contact__inner{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
+.contact{padding:82px 0;background:#08131a;border-top:1px solid var(--line)}
+.contact__inner{display:grid;grid-template-columns:minmax(260px,.75fr) minmax(420px,1.25fr);gap:72px;align-items:end}
 .contact h2{margin-bottom:0}
-.contact__links{display:flex;gap:14px;flex-wrap:wrap}
-.contact__links a{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:13px 18px;border:1px solid #466071;border-radius:999px;color:var(--text);text-decoration:none;background:rgba(255,255,255,.02);transition:.2s ease}
-.contact__links a:hover{border-color:var(--accent);background:rgba(212,154,82,.10);transform:translateY(-2px)}
+.contact__links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.contact-link{position:relative;display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:center;padding:21px 4px 18px;border-top:1px solid #49606c;color:var(--text);text-decoration:none;transition:border-color .2s ease,transform .2s ease}
+.contact-link::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .24s ease}
+.contact-link__meta{grid-column:1;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#d1b78f}
+.contact-link__label{grid-column:1;font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;line-height:1.2}
+.contact-link__arrow{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:1.4rem;color:#91a0a7;transition:transform .2s ease,color .2s ease}
+.contact-link:hover{border-color:#7f8f97;transform:translateY(-2px)}
+.contact-link:hover::after{right:0}
+.contact-link:hover .contact-link__arrow{color:var(--accent);transform:translate(3px,-3px)}
 
 .footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .logo-small{font-family:Georgia,serif;color:var(--text);letter-spacing:.08em}
 
-/* Avoid rendering far-below-the-fold sections until they approach the viewport. */
 main > .section,
 .image-chapter,
 .finale{content-visibility:auto;contain-intrinsic-size:900px}
 
 @media (max-width:860px){
-  .hero{height:76vh;min-height:560px}
-  .hero__brand{top:auto;bottom:24px;left:20px;width:calc(100% - 40px);padding:20px 20px 22px}
-  .hero__shade{background:linear-gradient(180deg,rgba(3,8,12,.04) 22%,rgba(3,8,12,.91) 100%)}
-  h1{font-size:clamp(3.4rem,17vw,5.4rem)}
+  .hero__layout{grid-template-columns:1fr;min-height:0}
+  .hero__visual{order:1;height:48vh;min-height:360px}
+  .hero__image{min-height:0;height:100%;object-position:center}
+  .hero__brand{order:2;padding:40px 22px 48px;border-right:0;border-top:1px solid rgba(116,145,160,.16)}
+  .hero__brand::after{display:none}
+  h1{font-size:clamp(3.6rem,16vw,5.6rem);margin-bottom:24px}
+  .hero__hook{font-size:1.08rem}
   .section{padding:72px 0}
   .intro-section{padding-bottom:28px}
   .sequence{gap:58px}
@@ -101,7 +106,6 @@ main > .section,
   .finale{min-height:68vh}
   .finale__copy{bottom:24px;padding:20px 20px 22px}
   .contact{padding:58px 0}
-  .contact__inner{align-items:flex-start;flex-direction:column}
-  .contact__links{width:100%}
-  .contact__links a{flex:1;min-width:135px}
+  .contact__inner{grid-template-columns:1fr;gap:36px}
+  .contact__links{grid-template-columns:1fr}
 }
