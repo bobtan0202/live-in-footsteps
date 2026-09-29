@@ -178,3 +178,116 @@ main > .section,
     margin-top:4px;
   }
 }
+
+
+/* Visual hierarchy pass */
+.hero__sub{
+  font-size:clamp(1.05rem,1.35vw,1.28rem);
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.06em;
+}
+
+.section--dark .eyebrow{
+  font-size:clamp(1.15rem,1.7vw,1.5rem);
+  line-height:1.2;
+  letter-spacing:.12em;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:24px;
+}
+
+.step{
+  font-size:clamp(1.05rem,1.45vw,1.32rem);
+  line-height:1.2;
+  letter-spacing:.13em;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+
+.feature-grid{
+  position:relative;
+  gap:0;
+}
+.feature-grid article{
+  position:relative;
+  border-top:0;
+  padding:0 30px 0 0;
+}
+.feature-grid article:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top:28px;
+  left:58px;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,rgba(212,154,82,.75),rgba(73,96,108,.45));
+}
+.feature-grid span{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:58px;
+  height:58px;
+  margin:0 0 24px;
+  border:1px solid rgba(212,154,82,.65);
+  border-radius:50%;
+  background:#0b161d;
+  font-size:1.35rem;
+  box-shadow:0 0 0 7px var(--bg);
+}
+.feature-grid h3{
+  font-size:1.45rem;
+  margin-bottom:10px;
+}
+.feature-grid p{
+  max-width:240px;
+}
+
+@media (max-width:860px){
+  .hero__sub{
+    font-size:1.05rem;
+  }
+  .section--dark .eyebrow{
+    font-size:1.08rem;
+    letter-spacing:.08em;
+  }
+  .step{
+    font-size:1.08rem;
+  }
+  .feature-grid{
+    display:block;
+  }
+  .feature-grid article{
+    min-height:108px;
+    padding:0 0 34px 78px;
+  }
+  .feature-grid article:not(:last-child)::after{
+    top:58px;
+    bottom:0;
+    left:28px;
+    right:auto;
+    width:1px;
+    height:auto;
+    background:linear-gradient(180deg,rgba(212,154,82,.75),rgba(73,96,108,.4));
+  }
+  .feature-grid span{
+    position:absolute;
+    left:0;
+    top:0;
+    width:56px;
+    height:56px;
+    margin:0;
+    box-shadow:0 0 0 6px var(--bg);
+  }
+  .feature-grid h3{
+    padding-top:2px;
+    font-size:1.35rem;
+  }
+  .feature-grid p{
+    max-width:none;
+  }
+}
