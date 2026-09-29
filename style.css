@@ -115,3 +115,35 @@ main > .section,
   .contact__inner{grid-template-columns:1fr;gap:36px}
   .contact__links{grid-template-columns:1fr}
 }
+
+.language-switch{
+  position:fixed;top:18px;right:18px;z-index:50;
+  display:flex;gap:2px;padding:4px;
+  border:1px solid rgba(185,202,211,.22);
+  border-radius:999px;
+  background:rgba(5,12,17,.72);
+  backdrop-filter:blur(14px);
+  box-shadow:0 8px 28px rgba(0,0,0,.22)
+}
+.language-switch__link{
+  min-width:44px;padding:7px 11px;border-radius:999px;
+  color:#aeb8bd;text-decoration:none;text-align:center;
+  font-size:.72rem;font-weight:700;letter-spacing:.12em;
+  transition:background .2s ease,color .2s ease
+}
+.language-switch__link:hover{color:#fff}
+.language-switch__link.is-active{
+  color:#071118;background:#e7dccb
+}
+.lang-ja{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,ui-sans-serif,system-ui,sans-serif}
+.lang-ja h2,.lang-ja h3,.lang-ja .contact-link__label{
+  font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;
+  letter-spacing:-.025em
+}
+.lang-ja .hero__hook{line-height:1.75}
+.lang-ja .hero__sub{letter-spacing:.03em;text-transform:none}
+.lang-ja .step{letter-spacing:.08em}
+@media (max-width:860px){
+  .language-switch{top:12px;right:12px}
+  .language-switch__link{min-width:40px;padding:6px 9px}
+}
