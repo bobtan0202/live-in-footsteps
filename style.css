@@ -147,3 +147,34 @@ main > .section,
   .language-switch{top:12px;right:12px}
   .language-switch__link{min-width:40px;padding:6px 9px}
 }
+@media (max-width:860px){
+  .sequence__item,
+  .sequence__item--reverse{
+    gap:16px;
+    align-items:start;
+  }
+  .sequence__item::before{
+    order:-2;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:3.15rem;
+    line-height:1;
+    color:var(--accent);
+    margin:0 0 2px;
+  }
+  .sequence__item:nth-child(1)::before{content:"01"}
+  .sequence__item:nth-child(2)::before{content:"02"}
+  .sequence__item:nth-child(3)::before{content:"03"}
+  .sequence__item img,
+  .sequence__item--reverse img{
+    order:-1;
+  }
+  .sequence__copy{
+    order:0;
+  }
+  .sequence__copy .number{
+    display:none;
+  }
+  .sequence__copy .step{
+    margin-top:4px;
+  }
+}
