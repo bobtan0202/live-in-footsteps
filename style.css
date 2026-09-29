@@ -291,3 +291,42 @@ main > .section,
     max-width:none;
   }
 }
+
+
+/* Japanese balance */
+.lang-ja .hero__hook{
+  font-size:clamp(1.12rem,1.65vw,1.55rem);
+  line-height:1.75;
+  max-width:560px;
+}
+.lang-ja .hero__sub{
+  font-size:clamp(1.12rem,1.5vw,1.38rem);
+  line-height:1.3;
+  letter-spacing:.055em;
+  font-weight:700;
+}
+.lang-ja .step{
+  font-size:clamp(1.18rem,1.55vw,1.42rem);
+  letter-spacing:.06em;
+}
+.lang-ja .section--dark .eyebrow{
+  font-size:clamp(1.22rem,1.8vw,1.55rem);
+  letter-spacing:.08em;
+}
+.lang-ja .intro-section .eyebrow,
+.lang-ja .image-chapter .eyebrow,
+.lang-ja .feature-story .eyebrow,
+.lang-ja .section__head .eyebrow,
+.lang-ja .private-note .eyebrow,
+.lang-ja .contact .eyebrow{
+  font-size:clamp(.88rem,1.05vw,1rem);
+  letter-spacing:.08em;
+  font-weight:700;
+  color:#e1bd88;
+}
+@media (max-width:860px){
+  .lang-ja .hero__hook{font-size:1.12rem}
+  .lang-ja .hero__sub{font-size:1.12rem}
+  .lang-ja .step{font-size:1.18rem}
+  .lang-ja .section--dark .eyebrow{font-size:1.16rem}
+}
