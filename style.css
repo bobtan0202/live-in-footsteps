@@ -65,6 +65,11 @@ h1 span{display:block;font-size:.2em;letter-spacing:.3em;margin:0 0 18px 6px}
 .finale__copy h2{max-width:1000px}
 .finale__copy p{max-width:760px;font-size:1.12rem;color:#e3e6e8}
 
+.private-note{padding:84px 0;background:linear-gradient(180deg,#0a151c,#081219);border-top:1px solid var(--line)}
+.private-note__inner{max-width:980px}
+.private-note h2{max-width:900px;margin-bottom:20px}
+.private-note p:last-child{max-width:760px;color:var(--muted);font-size:1.08rem}
+
 .contact{padding:82px 0;background:#08131a;border-top:1px solid var(--line)}
 .contact__inner{display:grid;grid-template-columns:minmax(260px,.75fr) minmax(420px,1.25fr);gap:72px;align-items:end}
 .contact h2{margin-bottom:0}
@@ -105,6 +110,7 @@ main > .section,
   .image-chapter__shade{background:linear-gradient(180deg,rgba(3,8,12,.03) 22%,rgba(3,8,12,.92) 100%)}
   .finale{min-height:68vh}
   .finale__copy{bottom:24px;padding:20px 20px 22px}
+  .private-note{padding:64px 0}
   .contact{padding:58px 0}
   .contact__inner{grid-template-columns:1fr;gap:36px}
   .contact__links{grid-template-columns:1fr}
