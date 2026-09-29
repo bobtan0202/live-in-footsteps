@@ -10,13 +10,16 @@
 </head>
 <body>
   <header class="hero">
-    <img class="hero__image" src="images/wip/00-hero.png" alt="A giant traveler overlooking an untouched mountain world at sunset." fetchpriority="high" decoding="async" />
-    <div class="hero__shade"></div>
-    <div class="hero__brand">
-      <p class="hero__eyebrow">AN ORIGINAL GAME CONCEPT</p>
-      <h1><span>LIVE IN</span> FOOTSTEPS</h1>
-      <p class="hero__hook">A survival game where your footsteps become civilization.</p>
-      <p class="hero__sub">Not 4X. Still civilization.</p>
+    <div class="hero__layout">
+      <div class="hero__brand">
+        <p class="hero__eyebrow">AN ORIGINAL GAME CONCEPT</p>
+        <h1><span>LIVE IN</span> FOOTSTEPS</h1>
+        <p class="hero__hook">A survival game where your footsteps become civilization.</p>
+        <p class="hero__sub">Not 4X. Still civilization.</p>
+      </div>
+      <div class="hero__visual">
+        <img class="hero__image" src="images/wip/00-hero.png" alt="A giant traveler overlooking an untouched mountain world at sunset." fetchpriority="high" decoding="async" />
+      </div>
     </div>
   </header>
 
@@ -135,8 +138,16 @@
         <h2>Get in touch.</h2>
       </div>
       <div class="contact__links">
-        <a href="https://discord.com/users/322708060818636800" target="_blank" rel="noopener noreferrer">Discord</a>
-        <a href="https://x.com/2scoutman" target="_blank" rel="noopener noreferrer">X / @2scoutman</a>
+        <a class="contact-link" href="https://discord.com/users/322708060818636800" target="_blank" rel="noopener noreferrer">
+          <span class="contact-link__meta">Discord</span>
+          <span class="contact-link__label">Direct message</span>
+          <span class="contact-link__arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://x.com/2scoutman" target="_blank" rel="noopener noreferrer">
+          <span class="contact-link__meta">X</span>
+          <span class="contact-link__label">@2scoutman</span>
+          <span class="contact-link__arrow">↗</span>
+        </a>
       </div>
     </div>
   </section>
