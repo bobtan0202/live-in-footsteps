@@ -68,7 +68,14 @@ h1 span{display:block;font-size:.19em;letter-spacing:.3em;margin:0 0 18px 8px}
 .finale__copy h2{max-width:1000px}
 .finale__copy p{max-width:760px;font-size:1.12rem;color:#e3e6e8}
 
-.footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}
+.contact{padding:78px 0;background:#09141b;border-top:1px solid var(--line)}
+.contact__inner{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
+.contact h2{margin-bottom:0}
+.contact__links{display:flex;gap:14px;flex-wrap:wrap}
+.contact__links a{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:13px 18px;border:1px solid #466071;border-radius:999px;color:var(--text);text-decoration:none;background:rgba(255,255,255,.02);transition:.2s ease}
+.contact__links a:hover{border-color:var(--accent);background:rgba(212,154,82,.10);transform:translateY(-2px)}
+
+.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .logo-small{font-family:Georgia,serif;color:var(--text);letter-spacing:.08em}
 
@@ -93,4 +100,8 @@ main > .section,
   .image-chapter__shade{background:linear-gradient(180deg,rgba(3,8,12,.03) 22%,rgba(3,8,12,.92) 100%)}
   .finale{min-height:68vh}
   .finale__copy{bottom:24px;padding:20px 20px 22px}
+  .contact{padding:58px 0}
+  .contact__inner{align-items:flex-start;flex-direction:column}
+  .contact__links{width:100%}
+  .contact__links a{flex:1;min-width:135px}
 }
